@@ -46,4 +46,7 @@ tmp/
 ## emacs
 *~
 
+# Python
 .coverage
+dist/*
+*.egg-info/*

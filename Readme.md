@@ -1,8 +1,15 @@
-# recap
+[![pipeline status](https://code.fbi.h-da.de/istmikeck/pt-recap/badges/master/pipeline.svg)](https://code.fbi.h-da.de/istmikeck/pt-recap/commits/master) [![coverage report](https://code.fbi.h-da.de/istmikeck/pt-recap/badges/master/coverage.svg)](https://code.fbi.h-da.de/istmikeck/pt-recap/commits/master)
+
+# recap 
 
 > **RE**quester + **CA**lculation + tem**P**later
 
 > *recap* (v.) — “To summarize or repeat in concise form.”
+
+recap is an university project for the course Professional Testing. 
+It is an example how testing environments can look like within the Python ecosystem. 
+recap is doing a basic https request to get some raw statistics data, doing some basic calculations with it
+and is eventually creating some human-friendly statistics based on a template.
 
 
 ## Requirements 
@@ -27,6 +34,21 @@ otherwise you can't run them easily.
 You can run all unit tests and coverage analysis by executing:
 
 `pytest tests --cov recap`
+
+
+## About the development of recap
+Recap is using the principle of [Test-driven development (TDD)](https://en.wikipedia.org/wiki/Test-driven_development).
+Which means that first of all, the requirements got specified and tests were written. 
+Only after this step is finished the functionality got implemented until all tests succeed
+and the requirements were meet. 
+
+Also to execute the tests automatically and continuously a CI setup was used from the beginning.
+This ensures that
+  * recap can be successfully build in a clear, sterile environment
+  * no tests are getting broken unknowingly
+    * people can be lazy and they might not execute the tests locally at all times 😄
+  * the code coverage is known and visible at all times, which can be a motivational factor to actual increase it
+    * fully in the spirit of [Gamification](https://en.wikipedia.org/wiki/Gamification)
 
 
 ## License 

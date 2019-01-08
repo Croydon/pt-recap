@@ -30,7 +30,7 @@ Please also make sure that the location for your installed Python modules is you
 otherwise you can't run them easily.
 
 
-## Run tests
+## Run tests locally
 You can run all unit tests and coverage analysis by executing:
 
 `pytest tests --cov recap`
@@ -47,8 +47,11 @@ This ensures that
   * recap can be successfully build in a clear, sterile environment
   * no tests are getting broken unknowingly
     * people can be lazy and they might not execute the tests locally at all times 😄
+    * CI is notify developers if something broke
   * the code coverage is known and visible at all times, which can be a motivational factor to actual increase it
     * fully in the spirit of [Gamification](https://en.wikipedia.org/wiki/Gamification)
+
+Furthermore, recap is using Continuous Deployment (CD) to publish new releases to https://test.pypi.org/project/recap/
 
 
 ## License 

@@ -1,0 +1,16 @@
+image: python:3.7-alpine
+
+stages:
+  - test
+  #- deploy
+
+before_script:
+  - export PATH=/root/.local/bin:$PATH
+  - pip install --user -U .
+  - pip install --user -U .[test]
+
+test:
+  stage: test
+  script:
+    - pytest tests --cov recap
+

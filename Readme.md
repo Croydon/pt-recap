@@ -19,6 +19,9 @@ If you want to run the tests you will additionally need the dev requirements, wh
 
 `pip install --user -U .[test]`
 
+Please also make sure that the location for your installed Python modules is your your environment PATH,
+otherwise you can't run them easily.
+
 
 ## Run tests
 You can run all unit tests and coverage analysis by executing:

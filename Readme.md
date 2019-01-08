@@ -1,6 +1,6 @@
 # recap
 
-> **RE**quest + **CA**lculation + tem**P**late using
+> **RE**quester + **CA**lculation + tem**P**later
 
 > *recap* (v.) — “To summarize or repeat in concise form.”
 
@@ -11,11 +11,19 @@ Please use Python 3.7 or newer to run recap.
 
 
 ## Installation
-To install the dependencies of recap execute 
-`pip install --user -r requirements.txt`
+To install recap and it's dependencies execute:
 
-If you want to run the test you will also need to dev requirements, which you can install via
-`pip install --user -r requirements_test.txt`
+`pip install --user -U .`
+
+If you want to run the tests you will additionally need the dev requirements, which you can install via:
+
+`pip install --user -U .[test]`
+
+
+## Run tests
+You can run all unit tests and coverage analysis by executing:
+
+`pytest tests --cov recap`
 
 
 ## License 

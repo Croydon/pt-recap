@@ -43,11 +43,11 @@ def test_get_users_numbers_only():
        {'count': 4745, 'date': '2018-11-02', 'end': '2018-11-02'},
        {'count': 4738, 'date': '2018-11-01', 'end': '2018-11-01'}
     ]
-    expected_result = (
+    expected_result = [
        5061, 5281, 5359, 5374, 5292, 4067, 3832, 4686, 4763, 5128,
        5241, 5213, 4041, 3857, 4954, 5210, 5182, 5237, 5033, 3897,
        3777, 4966, 5104, 5076, 5180, 5060, 3944, 3683, 4745, 4738
-    )
+    ]
 
     result = requester.get_users_numbers_only(data)
     assert result == expected_result

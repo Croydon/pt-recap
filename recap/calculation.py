@@ -40,7 +40,16 @@ class calculation():
 
     @staticmethod
     def biggest_increase(numbers: list):
-        return None
+        former_users = None
+        biggest_increase = 0
+        for day in numbers:
+            if not former_users:
+                former_users = day
+            else:
+                change_to_last_day = (day - former_users)
+                if change_to_last_day > biggest_increase:
+                    biggest_increase = change_to_last_day
+        return biggest_increase
 
     @staticmethod
     def biggest_decrease(numbers: list):

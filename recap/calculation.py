@@ -49,6 +49,7 @@ class calculation():
                 change_to_last_day = (day - former_users)
                 if change_to_last_day > biggest_increase:
                     biggest_increase = change_to_last_day
+            former_users = day
         return biggest_increase
 
     """ The decrease is without sign, so it is a positive int
@@ -64,6 +65,7 @@ class calculation():
                 change_to_last_day = (former_users - day)
                 if change_to_last_day > biggest_decrease:
                     biggest_decrease = change_to_last_day
+            former_users = day
         return biggest_decrease
 
     """ Total change of users, over the a time span,

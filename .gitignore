@@ -49,4 +49,5 @@ tmp/
 # Python
 .coverage
 dist/*
+venv/*
 *.egg-info/*

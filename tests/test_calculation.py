@@ -163,7 +163,7 @@ def test_total_changes_increase():
 
 def test_total_changes_decrease():
     numbers = (500, 300, 200, 2000, 420)
-    expected = 80
+    expected = -80
     result = calculation.total_change(numbers=numbers)
     assert result == expected
 

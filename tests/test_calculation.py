@@ -136,7 +136,7 @@ def test_biggest_decrease_with_increase_in_numbers():
     assert result == expected
 
 
-def test_ biggest_decrease_with_increases_only():
+def test_biggest_decrease_with_increases_only():
     numbers = (12, 485, 2000, 4785, 5007)
     expected = 0
     result = calculation.biggest_decrease(numbers=numbers)

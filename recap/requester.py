@@ -26,7 +26,10 @@ class requester():
 
     @staticmethod
     def get_users_numbers_only(data):
-        return None
+        numbers_only = []
+        for single_day in data:
+            numbers_only.append(single_day["count"])
+        return numbers_only
 
     @staticmethod
     def get_daily_users(start_date="20181101", end_date="20181130"):

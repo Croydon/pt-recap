@@ -42,6 +42,7 @@ def test_get_daily_users():
        {'count': 3944, 'date': '2018-11-04', 'end': '2018-11-04'},
        {'count': 3683, 'date': '2018-11-03', 'end': '2018-11-03'},
        {'count': 4745, 'date': '2018-11-02', 'end': '2018-11-02'},
+       {'count': 4738, 'date': '2018-11-01', 'end': '2018-11-01'}
     ]
     assert result == expected_result
 

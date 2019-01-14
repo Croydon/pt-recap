@@ -68,7 +68,12 @@ class calculation():
 
     """ Total change of users, over the a time span,
         basically first - last number
+        signed int
     """
     @staticmethod
     def total_change(numbers: list):
-        return None
+        first_data = numbers[0]
+        last_data = numbers[len(numbers) - 1]
+        print(last_data)
+
+        return (last_data - first_data)

@@ -20,7 +20,13 @@ class calculation():
 
     @staticmethod
     def min(numbers: list):
-        return None
+        user_min = None
+        for day in numbers:
+            if not user_min:
+                user_min = day
+            if user_min > day:
+                user_min = day
+        return user_min
 
     @staticmethod
     def max(numbers: list):

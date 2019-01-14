@@ -30,7 +30,13 @@ class calculation():
 
     @staticmethod
     def max(numbers: list):
-        return None
+        user_max = None
+        for day in numbers:
+            if not user_max:
+                user_max = day
+            if user_max < day:
+                user_max = day
+        return user_max
 
     @staticmethod
     def biggest_increase(numbers: list):

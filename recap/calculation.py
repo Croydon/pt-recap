@@ -51,9 +51,20 @@ class calculation():
                     biggest_increase = change_to_last_day
         return biggest_increase
 
+    """ The decrease is without sign, so it is a positive int
+    """
     @staticmethod
     def biggest_decrease(numbers: list):
-        return None
+        former_users = None
+        biggest_decrease = 0
+        for day in numbers:
+            if not former_users:
+                former_users = day
+            else:
+                change_to_last_day = (former_users - day)
+                if change_to_last_day > biggest_decrease:
+                    biggest_decrease = change_to_last_day
+        return biggest_decrease
 
     """ Total change of users, over the a time span,
         basically first - last number

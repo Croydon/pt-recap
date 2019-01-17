@@ -65,10 +65,19 @@ You can open it in any web browser to see the generated statistics.
 
 ## Structure of the application
 recap has three main parts: `requester`, `calculation` and  `templater`.
-`requester` is getting raw data from [Mozilla Addons](https://addons.mozilla.org) 
+`requester` is getting raw JSON data from [Mozilla Addons](https://addons.mozilla.org) 
 for my add-on [Vertical Tabs Reloaded](https://github.com/Croydon/vertical-tabs-reloaded) for a specific time span and transforming the data in a form Python can actually work with.
 `calculation` uses this data to calculate some basic statistics and provides the results to `templater`,
 which generates a HTML file with the final results.
+
+
+## Summary
+To recap the testing environment of recap, the following processes and tools were used: 
+  * test-driven development
+  * unit tests via pytest 
+  * coverage analysis via pytest_cov
+  * continuous integration via Gitlab CI
+  * continuous deployment via GitLab CI to https://test.pypi.org/project/recap/ 
 
 
 ## License 

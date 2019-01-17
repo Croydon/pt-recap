@@ -70,6 +70,8 @@ for my add-on [Vertical Tabs Reloaded](https://github.com/Croydon/vertical-tabs-
 `calculation` uses this data to calculate some basic statistics and provides the results to `templater`,
 which generates a HTML file with the final results.
 
+The implementation of the functions can be found in `recap/` while the tests can be found in `tests/`.
+
 
 ## Summary
 To recap the testing environment of recap, the following processes and tools were used: 

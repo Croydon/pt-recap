@@ -55,7 +55,7 @@ def test_fill():
 </html>
 """
 
-    tpl = templater(template=default_template)
+    tpl = templater(template_form=default_template)
     result = tpl.fill(
         {"start_date": "20181101",
          "end_date": "20181130",

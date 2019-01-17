@@ -2,7 +2,10 @@
 # -*- coding: utf-8 -*-
 
 from recap.templater import templater
+import os
+import filecmp
 
+basepath = os.path.dirname(__file__)
 
 default_template = """<!DOCTYPE html>
 <html lang="en">
@@ -25,16 +28,7 @@ default_template = """<!DOCTYPE html>
 </html>
 """
 
-
-def test_load():
-    expected_result = default_template
-    tpl = templater()
-    result = tpl.load()
-    assert result == expected_result
-
-
-def test_fill():
-    expected_result = """<!DOCTYPE html>
+default_template_generated_with_default_data = """<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -55,6 +49,17 @@ def test_fill():
 </html>
 """
 
+
+def test_load():
+    expected_result = default_template
+    tpl = templater()
+    result = tpl.load()
+    assert result == expected_result
+
+
+def test_fill():
+    expected_result = default_template_generated_with_default_data
+
     tpl = templater(template_form=default_template)
     result = tpl.fill(
         {"start_date": "20181101",
@@ -69,3 +74,18 @@ def test_fill():
     )
 
     assert str(result) == expected_result
+
+
+def test_save(tmpdir):
+    """ For the save test we are using the tmpdir fixture
+        as we don't want to save the data permanently
+        https://docs.pytest.org/en/latest/tmpdir.html
+    """
+
+    file_path = tmpdir.mkdir("recap").join("statistics.html")
+    file_path_correct = os.path.join(basepath, "data", "statistics.html")
+
+    tpl = templater(template_generated=default_template_generated_with_default_data)
+    tpl.save(file_path=file_path)
+
+    assert filecmp.cmp(file_path, file_path_correct)

@@ -51,3 +51,6 @@ tmp/
 dist/*
 venv/*
 *.egg-info/*
+
+# recap
+output/*

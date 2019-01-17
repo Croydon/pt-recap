@@ -34,7 +34,8 @@ setuptools.setup(
         "test": get_requires("requirements_test.txt")
     },
     package_data={
-        '': ['*.md']
+        '': ['*.md'],
+        '': ['data/*.tmpl']
     },
     entry_points={
         'console_scripts': [

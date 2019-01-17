@@ -76,6 +76,5 @@ class calculation():
     def total_change(numbers: list):
         first_data = numbers[0]
         last_data = numbers[len(numbers) - 1]
-        print(last_data)
 
         return (last_data - first_data)

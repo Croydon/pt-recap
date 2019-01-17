@@ -21,10 +21,12 @@ class templater():
 
     def fill(self, namespace):
         readme_parsed = Template(self.template, searchList=[namespace])
-        self.generated = readme_parsed
+        self.generated = str(readme_parsed)
         return readme_parsed
 
     def save(self, file_path=os.path.join("output", "statistics.html")):
+        if not os.path.isdir("output"):
+            os.mkdir("output")
         with open(file_path, 'w', encoding="utf-8") as f:
             f.write(self.generated)
 

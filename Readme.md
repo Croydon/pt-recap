@@ -54,5 +54,14 @@ This ensures that
 Furthermore, recap is using Continuous Deployment (CD) to publish new releases to https://test.pypi.org/project/recap/
 
 
+## Run the application 
+After you successfully installed the application, you can run it by executing
+
+`recap` 
+
+Recap will then create a file called `output/statistics.html` in your current working directory.
+You can open it in any web browser to see the generated statistics.
+
+
 ## License 
 recap is licensed under the terms of the [MIT license](License.md).

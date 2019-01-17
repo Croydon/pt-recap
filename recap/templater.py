@@ -8,8 +8,9 @@ basepath = os.path.dirname(__file__)
 
 
 class templater():
-    def __init__(self, template_form=""):
+    def __init__(self, template_form="", template_generated=""):
         self.template = template_form
+        self.generated = template_generated
         return
 
     def load(self, template_file="statistics.html.tmpl"):
@@ -20,7 +21,11 @@ class templater():
 
     def fill(self, namespace):
         readme_parsed = Template(self.template, searchList=[namespace])
+        self.generated = readme_parsed
         return readme_parsed
 
-    def save(self):
-        return None
+    def save(self, file_path=os.path.join("output", "statistics.html")):
+        with open(file_path, 'w', encoding="utf-8") as f:
+            f.write(self.generated)
+
+        return file_path

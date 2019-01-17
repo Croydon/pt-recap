@@ -35,6 +35,8 @@ You can run all unit tests and coverage analysis by executing:
 
 `pytest tests --cov recap`
 
+There are currently warnings about implementation details of the dependency `Cheetah` which can be safely ignored.
+
 
 ## About the development of recap
 Recap is using the principle of [Test-driven development (TDD)](https://en.wikipedia.org/wiki/Test-driven_development).

@@ -43,7 +43,7 @@ default_template_generated_with_default_data = """<!DOCTYPE html>
             <li>Max: 5292</li>
             <li>Biggest increase between two days: 1189</li>
             <li>Biggest decrease between two days: 1225</li>
-            <li>Total change: 323</li>
+            <li>Total change: -323</li>
         </ul>
     </body>
 </html>
@@ -69,7 +69,7 @@ def test_fill():
          "max": "5292",
          "biggest_increase": "1189",
          "biggest_decrease": "1225",
-         "total_change": "323"
+         "total_change": "-323"
         }
     )
 

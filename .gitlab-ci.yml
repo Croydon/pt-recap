@@ -8,6 +8,12 @@ before_script:
   - export PATH=/root/.local/bin:$PATH
   - pip install --user -U .
 
+
+run:
+  stage: run
+  script:
+    - recap
+
 test:
   stage: test
   script:

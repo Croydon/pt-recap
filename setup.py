@@ -15,7 +15,7 @@ with open("Readme.md", "r", encoding="utf8") as fh:
 
 setuptools.setup(
     name="recap",
-    version="0.0.1",
+    version="1.0.0",
     author="Croydon",
     author_email="cr0ydon@outlook.com",
     description="An example how a testing environment can look like in Python",
